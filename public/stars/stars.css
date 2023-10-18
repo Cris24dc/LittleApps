@@ -1,0 +1,47 @@
+.background {
+    width: 100%;
+    height: 100%;
+    background: var(--clr-grd-purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rate-con {
+    width: 30%;
+    height: 40%;
+    border-radius: 2rem;
+    background-color: var(--clr-light-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.submit {
+    background-color: white;
+    padding: .8rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    border-radius: 1.2rem;
+    border: none;
+    font-size: 1.4rem;
+}
+
+.stars-con {
+    display: flex;
+    padding: 2rem;
+}
+
+.stars-con button {
+    border: none;
+}
+
+.stars-con button img{
+    padding: .5rem;
+}
