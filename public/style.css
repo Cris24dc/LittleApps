@@ -1,0 +1,25 @@
+.background {
+  width: 100%;
+  height: 100%;
+  background: var(--clr-grd-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pages-con {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.pages-card {
+  background-color: var(--clr-light-gray);
+  border-radius: 1.6rem;
+  padding: 1.4rem;
+  margin: 2rem;
+}
+
+.pages-card img {
+  height: 5.8vw;
+}

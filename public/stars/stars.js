@@ -9,163 +9,45 @@ const title = document.querySelector(".title");
 let value = 0;
 
 star1.addEventListener("click", function () {
-  star1.firstElementChild.src = "img/star.png";
-  star2.firstElementChild.src = "img/stargray.png";
-  star3.firstElementChild.src = "img/stargray.png";
-  star4.firstElementChild.src = "img/stargray.png";
-  star5.firstElementChild.src = "img/stargray.png";
+  setStars(1);
 });
 
 star2.addEventListener("click", function () {
-  star1.firstElementChild.src = "img/star.png";
-  star2.firstElementChild.src = "img/star.png";
-  star3.firstElementChild.src = "img/stargray.png";
-  star4.firstElementChild.src = "img/stargray.png";
-  star5.firstElementChild.src = "img/stargray.png";
+  setStars(2);
 });
 
 star3.addEventListener("click", function () {
-  star1.firstElementChild.src = "img/star.png";
-  star2.firstElementChild.src = "img/star.png";
-  star3.firstElementChild.src = "img/star.png";
-  star4.firstElementChild.src = "img/stargray.png";
-  star5.firstElementChild.src = "img/stargray.png";
+  setStars(3);
 });
 
 star4.addEventListener("click", function () {
-  star1.firstElementChild.src = "img/star.png";
-  star2.firstElementChild.src = "img/star.png";
-  star3.firstElementChild.src = "img/star.png";
-  star4.firstElementChild.src = "img/star.png";
-  star5.firstElementChild.src = "img/stargray.png";
+  setStars(4);
 });
 
 star5.addEventListener("click", function () {
-  star1.firstElementChild.src = "img/star.png";
-  star2.firstElementChild.src = "img/star.png";
-  star3.firstElementChild.src = "img/star.png";
-  star4.firstElementChild.src = "img/star.png";
-  star5.firstElementChild.src = "img/star.png";
+  setStars(5);
 });
 
+function setStars(starCount) {
+  for (let i = 1; i <= 5; i++) {
+    const starButton = document.querySelector(`.star${i}`);
+    const starImage = starButton.firstElementChild;
+    if (i <= starCount) {
+      starImage.src = "img/star.png";
+    } else {
+      starImage.src = "img/stargray.png";
+    }
+  }
+}
+
 submit.addEventListener("click", function () {
-  console.log(star1.firstElementChild.src);
-  if (
-    star1.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/star.png" &&
-    star2.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/stargray.png" &&
-    star3.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/stargray.png" &&
-    star4.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/stargray.png" &&
-    star5.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/stargray.png"
-  ) {
-    value = 1;
-  } else if (
-    star1.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/star.png" &&
-    star2.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/star.png" &&
-    star3.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/stargray.png" &&
-    star4.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/stargray.png" &&
-    star5.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/stargray.png"
-  ) {
-    value = 2;
-  } else if (
-    star1.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/star.png" &&
-    star2.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/star.png" &&
-    star3.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/star.png" &&
-    star4.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/stargray.png" &&
-    star5.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/stargray.png"
-  ) {
-    value = 3;
-  } else if (
-    star1.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/star.png" &&
-    star2.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/star.png" &&
-    star3.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/star.png" &&
-    star4.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/star.png" &&
-    star5.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/stargray.png"
-  ) {
-    value = 4;
-  } else if (
-    star1.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/star.png" &&
-    star2.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/star.png" &&
-    star3.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/star.png" &&
-    star4.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/star.png" &&
-    star5.firstElementChild.src ==
-      "file:///C:/Users/crist/Desktop/Stars/img/star.png"
-  ) {
-    value = 5;
-  } else if (
-    star1.firstElementChild.src == "http://127.0.0.1:5500/img/star.png" &&
-    star2.firstElementChild.src == "http://127.0.0.1:5500/img/stargray.png" &&
-    star3.firstElementChild.src == "http://127.0.0.1:5500/img/stargray.png" &&
-    star4.firstElementChild.src == "http://127.0.0.1:5500/img/stargray.png" &&
-    star5.firstElementChild.src == "http://127.0.0.1:5500/img/stargray.png"
-  ) {
-    value = 1;
-  } else if (
-    star1.firstElementChild.src == "http://127.0.0.1:5500/img/star.png" &&
-    star2.firstElementChild.src == "http://127.0.0.1:5500/img/star.png" &&
-    star3.firstElementChild.src == "http://127.0.0.1:5500/img/stargray.png" &&
-    star4.firstElementChild.src == "http://127.0.0.1:5500/img/stargray.png" &&
-    star5.firstElementChild.src == "http://127.0.0.1:5500/img/stargray.png"
-  ) {
-    value = 2;
-  } else if (
-    star1.firstElementChild.src == "http://127.0.0.1:5500/img/star.png" &&
-    star2.firstElementChild.src == "http://127.0.0.1:5500/img/star.png" &&
-    star3.firstElementChild.src == "http://127.0.0.1:5500/img/star.png" &&
-    star4.firstElementChild.src == "http://127.0.0.1:5500/img/stargray.png" &&
-    star5.firstElementChild.src == "http://127.0.0.1:5500/img/stargray.png"
-  ) {
-    value = 3;
-  } else if (
-    star1.firstElementChild.src == "http://127.0.0.1:5500/img/star.png" &&
-    star2.firstElementChild.src == "http://127.0.0.1:5500/img/star.png" &&
-    star3.firstElementChild.src == "http://127.0.0.1:5500/img/star.png" &&
-    star4.firstElementChild.src == "http://127.0.0.1:5500/img/star.png" &&
-    star5.firstElementChild.src == "http://127.0.0.1:5500/img/stargray.png"
-  ) {
-    value = 4;
-  } else if (
-    star1.firstElementChild.src == "http://127.0.0.1:5500/img/star.png" &&
-    star2.firstElementChild.src == "http://127.0.0.1:5500/img/star.png" &&
-    star3.firstElementChild.src == "http://127.0.0.1:5500/img/star.png" &&
-    star4.firstElementChild.src == "http://127.0.0.1:5500/img/star.png" &&
-    star5.firstElementChild.src == "http://127.0.0.1:5500/img/star.png"
-  ) {
-    value = 5;
-  } else {
-    value = 0;
+  for (let i = 1; i <= 5; i++) {
+    const starButton = document.querySelector(`.star${i}`);
+    const starImage = starButton.firstElementChild;
+    if (starImage.src.endsWith("/img/star.png")) {
+      value = i;
+    }
   }
 
-  console.log(value);
   title.innerHTML = `Your rate is ${value}`;
-  value = 0;
-
-  star1.firstElementChild.src = "img/stargray.png";
-  star2.firstElementChild.src = "img/stargray.png";
-  star3.firstElementChild.src = "img/stargray.png";
-  star4.firstElementChild.src = "img/stargray.png";
-  star5.firstElementChild.src = "img/stargray.png";
 });

@@ -1,0 +1,155 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  font-family: var(--f-family);
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg,
+a {
+  display: block;
+  max-width: 100%;
+}
+
+a,
+a:active {
+  text-decoration: none;
+  color: var(--f-clr-primary);
+}
+
+a:visited {
+  text-decoration: none;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--f-size);
+  overflow-wrap: break-word;
+  font-weight: var(--f-weight-400);
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*variables*/
+
+:root {
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-txt-white: #ffffff;
+  --clr-txt-black: #000000;
+  --clr-light-gray: #edeff3;
+
+  --clr-salary: #83ea78;
+  --clr-dividend: #7899ea;
+  --clr-business: #da78ea;
+  --clr-rental: #eabb78;
+
+  --clr-food: #baea78;
+  --clr-transport: #a978ea;
+  --clr-clothes: #ea9e78;
+  --clr-medication: #78eaa1;
+  --clr-travel: #78e9ea;
+  --clr-utility: #ead778;
+  --clr-insurance: #ea78be;
+  --clr-education: #7888ea;
+  --clr-other: #ea7878;
+
+  --clr-car: #8b78ea;
+  --clr-debt: #eae378;
+  --clr-emergency: #ea78bb;
+  --clr-gadgets: #78eabe;
+  --clr-house: #9fea78;
+  --clr-retirement: #eaaf78;
+  --clr-vacation: #78eae9;
+
+  --clr-grd-purple: linear-gradient(
+    135deg,
+    rgba(129, 97, 255, 1) 0%,
+    rgba(213, 93, 255, 1) 100%
+  );
+  --clr-grd-green: linear-gradient(
+    135deg,
+    rgba(126, 225, 97, 1) 0%,
+    rgba(82, 227, 225, 1) 100%
+  );
+  --clr-grd-red: linear-gradient(
+    135deg,
+    rgba(251, 62, 62, 1) 0%,
+    rgba(255, 228, 106, 1) 100%
+  );
+  --clr-grd-pink: linear-gradient(
+    135deg,
+    rgba(251, 62, 218, 1) 0%,
+    rgba(255, 185, 98, 1) 100%
+  );
+  --clr-grd-blue: linear-gradient(
+    135deg,
+    rgba(176, 62, 251, 1) 0%,
+    rgba(98, 249, 255, 1) 100%
+  );
+
+  --f-weight-200: 200;
+  --f-weight-300: 300;
+  --f-weight-400: 400;
+  --f-weight-500: 500;
+  --f-weight-600: 600;
+  --f-weight-700: 700;
+  --f-weight-800: 800;
+
+  --f-size: 1rem;
+
+  --f-family: "Poppins", sans-serif;
+}

@@ -1,11 +1,13 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3000;
+const path = require("path");
 
-app.get("/", (req, res) => {
-  res.send("Hello, world!");
-});
+// Serve static files (your frontend) from a directory named 'public'
+app.use(express.static(path.join(__dirname, "public")));
 
-app.listen(port, () => {
-  console.log(`App is running on http://localhost:${port}`);
+// Define your API routes or any other backend logic here
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
